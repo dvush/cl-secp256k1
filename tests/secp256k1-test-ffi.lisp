@@ -45,7 +45,7 @@
 (define-test test-seckey
   :parent test-secp256k1-h
   (let ((correct-seckey (shareable-byte-vector-from-array
-			  #(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1)))
+			 #(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1)))
 	(tweak (shareable-byte-vector-from-array
 		#(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10))))
     (with-pointer-to-vector-data (sec-ptr correct-seckey)

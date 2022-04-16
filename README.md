@@ -10,7 +10,8 @@ and other blockchains.
 
 See your package manager for installation instructions. 
 
-Note that basic secp256k1 supports only basic signing and verification and recoverable signatures are not supported. All major distributions have all stable features turned on but if you have problems with that build library from source.
+Note that basic build of secp256k1 supports only simple signing and verification and some features might not work such as recoverable signatures, public key comparisons, etc. 
+For example, libsecp256k1 from ubuntu does not have functions for public key comparisons. Its always possible to build library from source to have all required features.
 
 Example:
 
@@ -47,7 +48,7 @@ brew install libsecp256k1
 ### Signatures and recoverable signatures.
 
 There are 2 types of signatures and methods associated with them: `signature*` and `recov-signature*`.
-They both are created using secret key. Signature contains only R and S value and verification assumes knowledge of the public key. Recoverable signature contains R,S and V (recovery id which is 0-3) and recovery procedure returns public key that was used for signature creation.
+They both are created using secret key. Signature contains only R and S value and verification assumes knowledge of the public key. Recoverable signature contains R, S and V (recovery id which is 0-3) and recovery procedure returns public key that was used for signature creation.
 
 ```lisp
 ;; signature

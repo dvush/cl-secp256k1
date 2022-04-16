@@ -20,5 +20,6 @@
 		:components
 		((:file "package")
 		 (:file "secp256k1-test-ffi")
-		 (:file "secp256k1-test"))))
-  :perform (asdf:test-op (op c) (uiop:symbol-call :parachute :test '(:secp256k1-test :secp256k1-test-ffi))))
+		 (:file "secp256k1-test")
+		 (:file "test-all"))))
+  :perform (asdf:test-op (op c) (uiop:symbol-call :secp256k1-test-all :asdf-test-system)))
