@@ -27,6 +27,13 @@ brew tap cuber/homebrew-libsecp256k1
 brew install libsecp256k1
 ```
 
+## Install CL bindings
+
+This library is not on quicklisp.
+
+1. Clone this library to somewhere where asdf or quicklisp could find it (e.g. `~/common-lisp/`)
+2. Load it to your image. (e.g. `(ql:quickload "secp256k1")`)
+
 ## Use
 
 ### Public and secret keys.
