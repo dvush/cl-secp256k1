@@ -6,3 +6,8 @@
   (:use #:cl #:secp256k1 #:parachute)
   (:export
    #:benchmark-report-compare-ironclad))
+
+
+(uiop:define-package #:secp256k1-test-all
+  (:use #:cl #:parachute)
+  (:export #:asdf-test-system))
