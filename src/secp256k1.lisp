@@ -304,6 +304,11 @@ Message should be hashed separatly and 32-byte octet array os hash is passed to 
 	  :s (subseq octets 32 64)
 	  :v recodery-id)))
 
+(defmethod recov-signature-destructure* ((recov-signature recov-signature))
+  "Returns r s v as multiple values"
+  (multiple-value-bind (octets recodery-id) (recov-signature-serialize recov-signature)
+    (values (subseq octets 0 32) (subseq octets 32 64) recodery-id)))
+
 (defun recov-signature-from-components (&key r s v)
   "Creates recoverable signature from components
 :r (32 bytes) :s (32 bytes) :v (0-3)"

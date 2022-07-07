@@ -140,4 +140,5 @@
    #:recov-signature-sign
    #:recov-signature-recover
    #:recov-signature-destructure
+   #:recov-signature-destructure*
    #:recov-signature-from-components))
